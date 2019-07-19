@@ -11,7 +11,9 @@ const setDataBase = () => {
     return pgp({
       database: 'quotes-app',
       port: 5432,
-      host: 'localhost'
+      host: '127.0.0.1',
+      user: 'quotes-user',
+      password: 'quotes-gen'
     })
   } else if (process.env.NODE_ENV === 'production') {
     return pgp(process.env.DATABASE_URL)
