@@ -5,10 +5,10 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const config = {
   entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
-  },
+    output: {
+      path: path.resolve(__dirname, 'build'),
+      filename: 'bundle.js',
+    },
   module: {
     rules: [
       {
@@ -24,8 +24,7 @@ const config = {
           {
             fallback: 'style-loader',
             use: 'css-loader'
-          }
-        )
+          })
       }
     ]
   }, 
